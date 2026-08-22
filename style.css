@@ -1,0 +1,477 @@
+
+/* ========================================
+   Peter Magner – Personal Website
+   Stories, Memories & Life's Journey
+   ======================================== */
+
+:root {
+  --cream: #f7f1e8;
+  --warm-white: #fffaf5;
+  --peach: #f3d8c7;
+  --peach-light: #f9e8dd;
+  --sage-light: #dce9df;
+  --sage: #91a99a;
+  --sage-dark: #496657;
+  --blue-light: #dcecf1;
+  --blue: #7fa6b2;
+  --lavender: #e6dff0;
+  --terracotta: #bd775f;
+  --gold: #d6ad63;
+  --text: #3d4842;
+  --muted-text: #66716a;
+  --border: rgba(73, 102, 87, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+.narrow {
+  width: min(760px, 90%);
+}
+
+/* ---------- Navigation ---------- */
+
+.site-header {
+  width: 100%;
+  background: var(--sage-dark); 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  background-color:var(--sage-dark); 
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-radius: 10px;
+  padding-inline: 12px;
+}
+
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  gap: 1.5rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.navigation a:hover {
+  color: var(--gold-light);
+}
+/* ---------- Headings ---------- */
+
+.eyebrow {
+  margin: 0 0 0.7rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.16em;
+  color: var(--terracotta);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--sage-dark);
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  font-weight: normal;
+}
+
+h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: normal;
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 5.5rem 0 5rem;
+  background:
+    radial-gradient(circle at 85% 20%, var(--peach) 0, transparent 28%),
+    radial-gradient(circle at 15% 80%, var(--blue-light) 0, transparent 30%),
+    linear-gradient(135deg, var(--warm-white), var(--cream));
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-text {
+  max-width: 700px;
+  margin: 0 0 0.8rem;
+  font-size: 1.1rem;
+  color: var(--muted-text);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.8rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--terracotta);
+  color: white;
+  box-shadow: 0 6px 16px rgba(189, 119, 95, 0.2);
+}
+
+.button-primary:hover {
+  background: var(--sage-dark);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--sage);
+  color: var(--sage-dark);
+}
+
+.button-secondary:hover {
+  background: var(--sage-light);
+}
+
+/* ---------- General Sections ---------- */
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.story-origin,
+.about,
+.closing {
+  padding: 2rem 0;
+}
+
+/* ---------- Introduction ---------- */
+
+.introduction {
+  text-align: center;
+  background: var(--peach-light);
+}
+
+.introduction p:last-child {
+  color: var(--muted-text);
+  font-size: 1.08rem;
+}
+
+/* ---------- Projects ---------- */
+
+.projects {
+  background: var(--warm-white);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 22px rgba(53, 64, 58, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Give each project its own colour */
+
+.project-card:nth-child(1) {
+  background: var(--peach-light);
+}
+
+.project-card:nth-child(2) {
+  background: var(--blue-light);
+}
+
+.project-card:nth-child(3) {
+  background: var(--sage-light);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(53, 64, 58, 0.12);
+}
+
+.project-icon {
+  margin-bottom: 1rem;
+  font-size: 2.4rem;
+}
+
+.project-tagline {
+  margin-top: 0;
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.project-card p:not(.project-tagline) {
+  color: var(--muted-text);
+}
+
+.text-link {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--sage-dark);
+}
+
+.text-link:hover {
+  color: var(--terracotta);
+}
+/* ---------- Large Feature Panels ---------- */
+
+.feature-panel {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 10%;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 22px rgba(53, 64, 58, 0.08);
+}
+
+.story-origin .feature-panel {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.about .feature-panel {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.closing .feature-panel {
+  background: rgba(255, 255, 255, 0.35);
+}
+/* ---------- Where It All Began ---------- */
+
+.story-origin {
+  text-align: center;
+  background:
+    linear-gradient(135deg, var(--sage-light), var(--cream));
+}
+
+.story-origin p:not(.eyebrow) {
+  color: var(--muted-text);
+}
+
+/* ---------- About ---------- */
+
+.about {
+  text-align: center;
+  background: var(--lavender);
+}
+
+.about p:not(.eyebrow) {
+  color: var(--muted-text);
+}
+
+/* ---------- Closing ---------- */
+
+.closing {
+  text-align: center;
+  background:
+    radial-gradient(circle at 15% 30%, var(--peach) 0, transparent 25%),
+    radial-gradient(circle at 85% 70%, var(--blue-light) 0, transparent 30%),
+    var(--cream);
+}
+
+.closing p:not(.eyebrow) {
+  margin-bottom: 1.8rem;
+  color: var(--muted-text);
+  font-size: 1.08rem;
+}
+/* ---------- Contact ---------- */
+
+.contact {
+  background: var(--peach-light);
+  padding: 3.8rem 0;
+}
+
+.contact-panel {
+  margin: 0 auto;
+  padding: 3rem 10%;
+  background: rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+.contact-intro {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  color: var(--muted-text);
+}
+
+.contact-form {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--sage-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(73, 102, 87, 0.25);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--terracotta);
+  box-shadow: 0 0 0 3px rgba(189, 119, 95, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+}
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding: 2.5rem 0;
+  text-align: center;
+  background: var(--sage-dark);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-name {
+  margin: 0 0 0.25rem;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.copyright {
+  margin-top: 1rem !important;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+  .nav-container {
+    padding: 0.9rem 0;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem 1.2rem;
+  }
+
+  .hero {
+    padding: 4.5rem 0;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 1.6rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
